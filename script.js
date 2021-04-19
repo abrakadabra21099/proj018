@@ -56,3 +56,7 @@ const test = time => {
 Promise.race([test(1000), test(2000)]).then(() => {
     console.log('all');
 });
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
